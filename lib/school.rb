@@ -1,5 +1,5 @@
 class School
-  attr_reader :school_name, :roster, :grade
+  attr_reader :school_name, :roster, :grade, :new_roster
   
   def initialize(school_name)
     @school_name = school_name
@@ -20,11 +20,11 @@ class School
   end
   
   def sort
-    new_roster
+    @new_roster
     @roster.sort.each do |key, value|
       new_roster[key] = vlaue.sort
     end
-    new_roster
+    @new_roster
   end
   
 end
