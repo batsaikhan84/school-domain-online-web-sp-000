@@ -1,5 +1,5 @@
 class School
-  attr_reader :school_name, :roster
+  attr_reader :school_name, :roster, :grade
   
   def initialize(school_name)
     @school_name = school_name
@@ -13,6 +13,13 @@ class School
       @roster[grade] = []
       @roster[grade] << name
     end
+    
+  def grade(grade)
+    @roster[grade]
+  end
+  
+  def sort
+    @roster.sort
   end
 end
 
