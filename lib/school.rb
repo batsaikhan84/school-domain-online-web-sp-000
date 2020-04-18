@@ -22,7 +22,7 @@ class School
   def sort
     @new_roster
     @roster.sort.each do |key, value|
-      @new_roster[key] = vlaue.sort
+      @new_roster[key] = value.sort
     end
     @new_roster
   end
